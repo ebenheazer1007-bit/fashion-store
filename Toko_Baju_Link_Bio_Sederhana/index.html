@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store | Toko Baju</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="store">
+    <header class="profile">
+      <div class="brand-mark">FS</div>
+      <p class="eyebrow">STYLE YOUR EVERYDAY</p>
+      <h1>Fashion Store</h1>
+      <p class="tagline">Kaos &amp; kemeja pilihan • simpel • kekinian</p>
+
+      <div class="social">
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a href="https://wa.me/6282274390654" target="_blank">WhatsApp</a>
+      </div>
+    </header>
+
+    <section class="search-box">
+      <input type="search" id="searchInput"
+        placeholder="Cari kaos atau kemeja...">
+    </section>
+
+    <nav class="filter">
+      <button class="filter-btn active" data-category="semua">Semua</button>
+      <button class="filter-btn" data-category="kaos">Kaos</button>
+      <button class="filter-btn" data-category="kemeja">Kemeja</button>
+    </nav>
+
+    <section class="catalog">
+      <div class="catalog-head">
+        <div>
+          <p class="eyebrow">KOLEKSI TERBARU</p>
+          <h2>Produk Fashion</h2>
+          <p>Pilih produk dan ukuran favoritmu</p>
+        </div>
+
+        <button class="cart-open" onclick="bukaKeranjang()">
+          🛒 <span id="jumlahKeranjang">0</span>
+        </button>
+      </div>
+
+      <div id="productList" class="product-list"></div>
+    </section>
+
+    <footer>
+      <p>© 2026 Fashion Store • Tampil percaya diri setiap hari</p>
+    </footer>
+  </main>
+
+  <div id="cartModal" class="modal">
+    <div class="cart">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">PESANAN KAMU</p>
+          <h2>Keranjang Belanja</h2>
+          <p>Periksa produk dan ukuran sebelum checkout.</p>
+        </div>
+
+        <button class="close" onclick="tutupKeranjang()">×</button>
+      </div>
+
+      <div id="cartList"></div>
+
+      <div class="total">
+        <span>Total Harga</span>
+        <strong id="totalHarga">Rp0</strong>
+      </div>
+
+      <button class="checkout" onclick="checkoutWhatsApp()">
+        Checkout via WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
